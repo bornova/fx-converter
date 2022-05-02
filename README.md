@@ -15,14 +15,14 @@ npm i fx-converter
 #### ES modules
 
 ```javascript
-import fx from 'fx-converter'
+import fxConverter from 'fx-converter'
 
-let rates = await fx('usd', 'try', 100)
+let rates = await fxConverter('usd', 'try', 100)
 console.log(rates.result)
 
 // Or
 
-fx('usd', 'try', 100).then((rates) => {
+fxConverter('usd', 'try', 100).then((rates) => {
   console.log(rates.result)
 })
 ```
@@ -30,16 +30,16 @@ fx('usd', 'try', 100).then((rates) => {
 #### commonJS
 
 ```javascript
-const fx = require('fx-converter')
+const fxConverter = require('fx-converter')
 
 async function convert() {
-  let rates = await fx('usd', 'try', 100)
+  let rates = await fxConverter('usd', 'try', 100)
   console.log(rates.result)
 }
 
 // Or
 
-fx('usd', 'try', 100).then((rates) => {
+fxConverter('usd', 'try', 100).then((rates) => {
   console.log(rates.result)
 })
 ```
@@ -47,7 +47,7 @@ fx('usd', 'try', 100).then((rates) => {
 ### Parameters
 
 ```javascript
-fx(from: string, to: string, amount: number): Promise<Object>
+fxConverter(from: string, to: string, amount: number): Promise<Object>
 
 /**
  * @param {string} from - Currency code to convert from (ISO 4217)
